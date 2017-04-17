@@ -1,0 +1,38 @@
+[% INCLUDE header.html %]
+<h1 class="title">ユーザ登録</h1>
+<p><a href="[% common_url %]" style="font-size:12px;">トップに戻る</a></p>
+<div class="login_form">
+ <form action="[% common_url %]account_confirm" method="post">
+ <table border="0">
+  <tr>
+   <th style="text-align:left;">ユーザID:</th><td>学芸ポータルのポータルID (情報処理センターアカウントの「****@st.u-gakugei.ac.jp」の「****」のみ)を入力してください．</td>
+  </tr>
+  <tr>
+   <td colspan="2"><input name="userid" type="text" size="32" maxlength="32" value="" style="font-size:26px;"></td>
+  </tr>
+  <tr>
+   <th style="text-align:left;">メールアドレス:</th><td>登録完了後，パスワードを書いたメールを送ります．原則として東京学芸大学のメールアドレスを入力してください．</td>
+  </tr>
+  <tr>
+   <td colspan="2"><input name="mail_address" type="text" size="40" style="font-size:26px;"></td>
+  </tr>
+  <tr>
+   <th style="text-align:left;">氏名(日本語)</th><td></td>
+  </tr>
+   <td><input name="family_name_ja" type="text" size="10" value="学芸" style="font-size:26px;"></td><td><input name="first_name_ja" type="text" size="10" value="太郎" style="font-size:26px;"></td>
+  </tr>
+  <tr>
+   <th style="text-align:left;">氏名(ローマ字)</th><td></td>
+  </tr>
+  <tr>
+    <td><input name="family_name" type="text" size="10" value="Gakugei" style="font-size:26px;"></td><td><input name="first_name" type="text" size="10" value="Taro" style="font-size:26px;"></td>
+   </td>
+  </tr>
+  <tr>
+   <td><input type="submit" value=" 送信 "></td>
+   <td><input type="reset" value=" クリア "></td>
+  </tr>
+ </table>
+ </form>
+ </div>
+[% INCLUDE footer.html %]

@@ -1,0 +1,15 @@
+[% INCLUDE header.html %]
+<h1 class="title">ユーザ登録完了</h1>
+<p><a href="[% common_url %]" style="font-size:12px;">トップに戻る</a></p>
+
+[% IF error == "" %]
+<p>ユーザ登録が完了しました．</p>
+<ul>
+ <li>ユーザ名: [% userid %]</li>
+ <li>パスワード: [% password %]</li>
+</ul>
+<p>上記のユーザ名とパスワードを用いて，<a href="/tracing/" target="_blank">プログラムのトレーシングのページ ([% hostname %]/tracing/)</a> にログインできることを確認してください．</p>
+[% ELSE %]
+<p><span class="attention">[% error %]</span><a href="[% common_url %]account">登録ページ</a>でもう一度登録し直してください．</p>
+[% END %]
+[% INCLUDE footer.html %]

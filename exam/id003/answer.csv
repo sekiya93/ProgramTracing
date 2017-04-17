@@ -1,0 +1,9 @@
+index,source,input,answer,CHANGE_VARIABLE_IN_CONDITION,CHANGE_VARIABLE_IN_CONDITION2,CHANGE_VARIABLE_IN_LOOP,CHANGE_VARIABLE_IN_LOOP2,CHANGE_VARIABLE_IN_SIMPLE_LOOP,NEGLECT_FOR_LOOP,REGARD_AS_ARRAY,type
+1,tt005.rb,"[1, 1, 1, 0, 0]","[1, 1, 1, 1, 0]",-,-,-,-,-,-,-,trace
+2,tt005.rb,"[1, 0, 0, 1, 0]","[1, 1, 0, 1, 0]",-,-,-,-,-,-,-,trace
+3,tt004.rb,"[1, 1, 1, 0, 0]","[0, 0, 0, 1, 0]",-,-,-,-,-,-,-,trace
+4,tt004.rb,"[1, 0, 0, 1, 0]","[0, 1, 0, 1, 0]",-,-,-,-,-,-,-,trace
+5,tt013.rb,"[1, 0, 0, 0, 0, 2]","[0, 1, 1, 1, 1, 2]",-,-,-,-,-,-,-,trace
+6,tt013.rb,"[1, 0, 1, 0, 0, 2]","[0, 1, 0, 1, 1, 2]",-,-,-,-,-,-,-,trace
+7,tt014.rb,"[2, 0, 0, 1, 0]","[2, 0, 0, 0, 0]",-,-,-,-,-,-,-,trace
+8,tt014.rb,"[2, 1, 0, 1, 2]","[2, 0, 0, 0, 2]",-,-,-,-,-,-,-,trace

@@ -1,0 +1,27 @@
+#
+# 変換器
+#
+# Time-stamp: <2013-07-08 15:17:42 sekiya>
+#
+# LABEL,script_file,description
+# - LABEL: スクリプト内での識別などに用いる
+# - script_file: 変換に用いる Perl スクリプト
+# - description: 説明
+NEGLECT_FOR_LOOP,neglect_for_loop.pl,"for 又は while ループを正しく解釈していない可能性があります．"
+CHANGE_VARIABLE_IN_LOOP,change_variable_in_loop.pl,"for 又は while ループ内で，制御変数 i の最大値に相当する変数 a を，for 又は while文の制御変数と解釈している可能性があります．"
+CHANGE_VARIABLE_IN_LOOP2,change_variable_in_loop2.pl,"for 又は whileループ内で，for 又は while文の制御変数 i を 制御変数の最大値に相当する変数 a と解釈している可能性があります．"
+CHANGE_VARIABLE_IN_SIMPLE_LOOP,change_variable_in_simple_loop.pl,"for 又は whileループ内で，制御変数 i の最大値に相当する変数 a を，for 又は while文の制御変数と解釈している可能性があります．"
+REGARD_AS_ARRAY,regard_as_array.pl,"変数 ans を，配列と誤って解釈している可能性があります．"
+#
+# Tue May  1 09:08:20 2012
+CHANGE_VARIABLE_IN_CONDITION,change_variable_in_condition.pl,"for 又は while ループ内の if 文の条件式で，for 又は while文の制御変数 i の最大値に相当する変数 a を，誤って for 又は while文の制御変数と解釈している可能性があります．"
+CHANGE_VARIABLE_IN_CONDITION2,change_variable_in_condition2.pl,"for 又は whileループ内の if 文の条件式で，for 又は while文の制御変数 i を，誤って for 又は while 文の制御変数の最大値に相当する変数 a と解釈している可能性があります．"
+CHANGE_SIGN_OF_INEQUALITY,change_sign_of_inequality.pl,"不等号の向きを誤って解釈している可能性があります．"
+MISUNDERSTAND_2D_ARRAY,misunderstand_2D_array.pl,"2次元配列の添字を誤って解釈している可能性があります．"
+#
+# Mon Jul  8 15:14:30 2013
+ADD_EQUALITY_TO_INEQUALITY,add_equality_to_inequality.pl,"不等号のみの条件式(「より大きい」或いは「より小さい」)に，誤って等号を補って解釈(「以上」或いは「以下」)と解釈した可能性があります．"
+# 
+unknown,,"不明"
+no_answer,,"未回答"
+answer,,"正答"

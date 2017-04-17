@@ -1,0 +1,9 @@
+def a8(a)
+  ans = 0
+  if i == 3 then
+    ans = ans + i
+  else
+    ans = ans - i
+  end
+  p(ans)
+end

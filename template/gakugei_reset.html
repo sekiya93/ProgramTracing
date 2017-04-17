@@ -1,0 +1,26 @@
+[% INCLUDE header.html %]
+<h1 class="title">パスワードリセット</h1>
+<p><a href="[% common_url %]" style="font-size:12px;">トップに戻る</a></p>
+<div class="login_form">
+ <form action="[% common_url %]reset_confirm" method="post">
+ <table border="0">
+  <tr>
+   <th style="text-align:left;">メールアドレス:</th><td>登録時に入力したメールアドレスを入力してください．</td>
+  </tr>
+  <tr>
+   <td colspan="2"><input name="mail_address" type="text" size="40" style="font-size:26px;"></td>
+  </tr>
+  <!-- <tr> -->
+  <!--  <th style="text-align:left;">メールアドレス(確認):</th><td>確認のため同じメールアドレスをもう一度入力してください．</td> -->
+  <!-- </tr> -->
+  <!-- <tr> -->
+  <!--  <td colspan="2"><input name="mail_address_confirm" type="text" size="40" style="font-size:26px;"></td> -->
+  <!-- </tr> -->
+  <tr>
+   <td><input type="submit" value=" 送信 "></td>
+   <td><input type="reset" value=" クリア "></td>
+  </tr>
+ </table>
+ </form>
+ </div>
+[% INCLUDE footer.html %]

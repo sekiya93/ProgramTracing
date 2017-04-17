@@ -1,0 +1,23 @@
+[% INCLUDE header.html %]
+
+<h1 class="title">解答結果とアンケート: [% exam_name %]</h1>
+
+<p>以下にあなたの解答と正解[% IF show_error_pattern == "1" %]，更に想定される誤答の理由[% END %]を示しています．なぜそのように解答したか，お分かりの範囲でお答えください．</p>
+
+<form action="questionnaire" method="post">
+  <input type="hidden" name="exam_id" value="[% exam_id %]">
+  <input type="hidden" name="answer_id" value="[% answer_id %]">
+<div class="fixed_height">
+<table>
+<tr>
+ <th>設問番号</th><th>[% code_title %]</th><th>内容</th><th>あなたの解答</th><th>正答</th><th>解答理由</th>[% IF show_error_pattern == "1" %]<th>推測される理由</th>[% END %]
+</tr>
+[% answer_html %]
+</table>
+</div>
+<p><span class="attention">提出ボタンを押した時点で即提出として扱います．入力内容の確認画面はありません．従って，よく確認してから提出ボタンを押してください．</span><br><input type="submit" value=" 提出 ">
+<!-- <input type="reset" value=" リセット "> -->
+</p>
+
+</form> 
+[% INCLUDE footer.html %]

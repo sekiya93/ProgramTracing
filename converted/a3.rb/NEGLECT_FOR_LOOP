@@ -1,0 +1,5 @@
+def a3(a)
+  ans = 0
+  ans = ans + a
+  p(ans)
+end

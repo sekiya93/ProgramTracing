@@ -1,0 +1,64 @@
+#!/bin/bash
+#
+# plack_gakugei        Startup script for the Plack Tracing Server
+#
+# chkconfig: - 85 15
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+USER=sekiya
+
+# Path
+START_SERVER=/usr/local/bin/start_server
+PLACKUP=/usr/local/bin/plackup
+#
+APP_HOME=/usr/local/plack/tracing
+APP_NAME=gakugei_user
+APP_FILE=${APP_HOME}/${APP_NAME}.psgi
+PID_FILE=${APP_HOME}/tmp/${APP_NAME}.pid
+STATUS_FILE=${APP_HOME}/tmp/${APP_NAME}.status
+
+PORT=5001
+WORKERS=10
+
+start() {
+        echo -n $"Starting $APP_NAME: "
+        daemon --pidfile=${PID_FILE} sudo -u ${USER} ${START_SERVER} --pid-file=${PID_FILE} --status-file=${STATUS_FILE} -- ${PLACKUP} --workers=${WORKERS} --port ${PORT} ${APP_FILE} &
+        RETVAL=$?
+        echo
+        return $RETVAL
+}
+
+stop() {
+	echo -n $"Stopping $APP_NAME: "
+	killproc -p ${PID_FILE}  $APP_NAME
+	RETVAL=$?
+	echo
+	[ $RETVAL = 0 ] && rm -f ${PID_FILE}
+}
+# reload() {
+#     echo -n $"Reloading $prog: "
+    
+#     sudo -u ${USER} $START_SERVER --restart --pid-file=${PID_FILE} --status-file=${STATUS_FILE}
+#     echo
+# }
+
+# See how we were called.
+case "$1" in
+  start)
+	start
+	;;
+  stop)
+	stop
+	;;
+  restart)
+	stop
+	start
+	;;
+  *)
+	echo $"Usage: $prog {start|stop|restart}"
+	exit 1
+esac
+
+exit $RETVAL

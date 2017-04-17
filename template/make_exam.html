@@ -1,0 +1,12 @@
+[% INCLUDE header.html %]
+
+<h1 class="title">userid: [% userid %]</h1>
+<p>新規作成:</p>
+<form action="create_exam" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="userid" value="[% userid %]"/>
+  <input type="file" name="exam_file"/>
+  <input type="submit" value="作成" />
+</form>
+<p>登録済:</p>
+
+[% INCLUDE footer.html %]

@@ -1,0 +1,11 @@
+index,source,input,answer,CHANGE_VARIABLE_IN_CONDITION,CHANGE_VARIABLE_IN_CONDITION2,CHANGE_VARIABLE_IN_LOOP,CHANGE_VARIABLE_IN_LOOP2,CHANGE_VARIABLE_IN_SIMPLE_LOOP,NEGLECT_FOR_LOOP,REGARD_AS_ARRAY,type
+1,it001.rb,8,[3],-,-,-,-,-,-,-,inverse_trace
+2,it001.rb,6,[5],,,,,,,,inverse_trace
+3,it002.rb,10,[4],-,-,-,-,-,-,-,inverse_trace
+4,it002.rb,16,[2],,,,,,,,inverse_trace
+5,it003.rb,-3,[3],,,,,,,,inverse_trace
+6,it003.rb,1,[5],,,,,,,,inverse_trace
+7,it004.rb,7,[5],,,,,,,,inverse_trace
+8,it004.rb,-1,[1],,,,,,,,inverse_trace
+9,it006.rb,4,[1],,,,,,,,inverse_trace
+10,it007.rb,5,[7],,,,,,,,inverse_trace

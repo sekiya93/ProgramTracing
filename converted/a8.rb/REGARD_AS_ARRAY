@@ -1,0 +1,11 @@
+def a8(a)
+  ans = []
+  for i in 1 .. a
+    if i == 3 then
+      ans.push(i)
+    else
+      ans.push(i.-@)
+    end
+  end
+  p(ans)
+end

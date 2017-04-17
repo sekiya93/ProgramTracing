@@ -1,0 +1,11 @@
+def a9(a)
+  ans = []
+  if a > 3 then
+    for i in 1 .. a
+      ans.push(i)
+    end
+  else
+    ans.push(a.-@)
+  end
+  p(ans)
+end

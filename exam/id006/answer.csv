@@ -1,0 +1,11 @@
+index,source,input,answer,CHANGE_VARIABLE_IN_CONDITION,CHANGE_VARIABLE_IN_CONDITION2,CHANGE_VARIABLE_IN_LOOP,CHANGE_VARIABLE_IN_LOOP2,CHANGE_VARIABLE_IN_SIMPLE_LOOP,NEGLECT_FOR_LOOP,REGARD_AS_ARRAY,CHANGE_SIGN_OF_INEQUALITY,type
+1,r101.rb,3,7,-,-,-,-,-,-,-,-,trace
+2,r102.rb,3,"[3, 1, 2, 1]",-,-,-,-,-,-,-,-,trace_output
+3,r103.rb,3,7,-,-,-,-,-,-,-,-,trace
+4,r002.rb,5,120,-,-,-,-,-,-,-,-,trace
+5,r001.rb,20,1,-,-,-,-,-,-,-,-,trace
+6,r105.rb,"[3, []]","[3, 1, -1, 0, 2, 0, 1, -1, 0]",-,-,-,-,-,-,-,-,trace_more_than_one
+7,r107.rb,2,"[0, 2, -1, 1, 0]",-,-,-,-,-,-,-,-,trace
+8,r004.rb,"[4, [2, 15, 4, 8, 1]]",15,-,-,-,-,-,-,-,-,trace_more_than_one
+9,r005.rb,"[3, [1, 2, 3, 4]]",10,,,,,,,,,trace_more_than_one
+10,r003.rb,"[5, 2]",10,-,-,-,-,-,-,-,-,trace_more_than_one

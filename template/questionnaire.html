@@ -1,0 +1,14 @@
+[% INCLUDE header.html %]
+
+<h1 class="title">アンケート結果: [% exam_name %]</h1>
+
+<p>アンケートにご協力頂きどうも有り難うございました．問題の難易度[% IF show_error_pattern == "1" %]や以下に表示される「推測される理由」[% END %]等について，感想や意見をメールで <a href="mailto:[% admin %]">[% admin %]</a>で送ってください．</p>
+<!-- <p><a href="/tracing/">試験一覧に戻る</a></p> -->
+
+<table>
+<tr>
+ <th>設問番号</th><th>[% code_title %]</th><th>内容</th><th>あなたの解答</th><th>正答</th><th>解答理由</th>[% IF show_error_pattern == "1" %]<th>推測される理由</th>[% END %]
+</tr>
+[% questionnaire_html %]
+</table>
+[% INCLUDE footer.html %]

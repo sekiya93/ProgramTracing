@@ -1,0 +1,11 @@
+ans ← 0
+i ← 1
+while i <= a do
+  if i > 3 
+    then
+      ans ← ans + i
+    else
+      ans ← ans - i
+  endif
+  i ← i + 1
+done

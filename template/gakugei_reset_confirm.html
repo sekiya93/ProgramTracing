@@ -1,0 +1,26 @@
+[% INCLUDE header.html %]
+<h1 class="title">パスワードリセットの確認</h1>
+<p><a href="[% common_url %]" style="font-size:12px;">トップに戻る</a></p>
+
+[% IF error == "" %]
+<p>パスワードのリセットに必要なコードをメールで送りました．10分ほど待ってもメールが届かない場合は，<a href="[% common_url %]reset">パスワードリセットのページ</a>に戻ってください．</p>
+<div class="login_form">
+ <form action="[% common_url %]reset_execution" method="post">
+ <table border="0">
+  <tr>
+   <td colspan="2">メールに書かれたコードを入力してください．</td>
+  </tr>
+  <tr>
+   <td colspan="2"><input name="ticket" type="text" size="48" maxlength="48" value="" style="font-size:26px;"></td>
+  </tr>
+  <tr>
+   <td><input type="submit" value=" 送信 "></td>
+   <td><input type="reset" value=" クリア "></td>
+  </tr>
+ </table>
+ </form>
+ </div>
+[% ELSE %]
+<p><span class="attention">[% error %]</span><a href="[% common_url %]reset">パスワードリセットのページ</a>で改めてメールアドレスを入力してください．</p>
+[% END %]
+[% INCLUDE footer.html %]

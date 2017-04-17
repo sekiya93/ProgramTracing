@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+ <title>Program Tracing 問題: 以下の問に答えなさい</title>
+ <meta http-equiv="pragma" content="no-cache">
+ <meta http-equiv="cache-control" content="no-cache">
+ <meta http-equiv="Content-Type" content="text/html;">
+ <link rev="made" href="mailto:tsekiya at gakugei-u.ac.jp">
+<!--[if IE]><script type="text/javascript" src="/gakugei/html5jp/excanvas/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="https://rp1.ecc.u-tokyo.ac.jp/gakugei/html5jp/graph/circle.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+  var cg = new html5jp.graph.circle("sample");
+  if( ! cg ) { return; }
+  var items = [
+    ["ある", 0],
+	["ない", 17],
+	["分からない", 1]
+  ];
+  var params = {
+    caption: true
+  };
+  cg.draw(items, params);
+};
+</script>
+ <style type="text/css">
+<!--
+body
+{
+  background: white;
+  margin:5px;
+}
+h1
+{
+  text-align: left;
+  font-size: x-large;
+  color: navy;
+  border-bottom: 1px grey solid;
+}
+h2
+{
+  font-size: large;
+  text-align: left;
+  color: navy;
+  border-bottom: 1px grey solid;
+}
+p{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+span.date{
+  font-size: small;
+  color: grey;
+}
+.attention{
+  color: red;
+  font-weight: bold;
+}
+li.title{
+  font-weight: bold;
+}
+pre{
+  background: black;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+-->
+ </style>
+</head>
+<body>
+
+<h1 class="title">Program Tracing 問題</h1>
+
+<p>プログラムを実行しないで，頭で考えて解答し，提出してください．正解したかどうかは成績には反映しませんが，提出したかどうかは考慮します。結果を統計的に処理してどの問題が間違いやすいかは学術研究に使用することがあります。</p>
+
+<form action="questionnaire.cgi" method="get">
+<input type="hidden" name="qid" value="ruby">
+<input type="hidden" name="task" value="answer">
+<input type="hidden" name="session_id"
+       value="1334552529_wgvqhoyyezeixinyidzt">
+
+<h2 class="section">問1</h2>
+
+<table>
+<tr>
+<td>
+<pre class="script">
+def a1(a)
+  ans = 0
+  if a > 3
+    ans = ans + a
+  else
+    ans = ans - a
+  end
+  p ans
+end
+</pre>
+</td>
+<td>
+<p><em>a1(3)</em>を実行した時に，<em>p ans</em>で出力される値は<input name="a1_3">である．</p>
+<p><em>a1(4)</em>を実行した時に，<em>p ans</em>で出力される値は<input name="a1_4">である．</p>
+</td>
+</tr>
+</table>
+<h2 class="section">問2</h2>
+...
+
+
+</form>
+
+<!-- <h2>集計結果 <span class="date">2012年04月16日 14時07分24秒 現在</span></h2> -->
+<!-- <div><canvas width="800" height="300" id="sample"></canvas></div> -->
+<!--  <hr> -->
+<!--  <div class="footer"> -->
+<!--   <address>tsekiya at gakugei-u.ac.jp</address> -->
+<!--   <a href="/gakugei/questionnaire.cgi?session_id=1334552529_wgvqhoyyezeixinyidzt">アンケート</a><br> -->
+<!--  </div> -->
+
+</body>
+</html>

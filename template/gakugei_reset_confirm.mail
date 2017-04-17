@@ -1,0 +1,33 @@
+From: [% sender %]
+Errors-To: [% sender %]
+Reply-To: [% sender %]
+To: [% mail_address %]
+Subject: Confirm password reset
+Content-Type: Text/Plain; charset=iso-2022-jp
+Content-Transfer-Encoding: 7bit
+
+[% fullname_ja %] 様
+
+東京学芸大学「コンピュータ概論」及び「数学科と情報」の
+講義用のアカウントについて，パスワードのリセットの
+リクエストがありました．
+
+パスワードリセットの確認ページで，
+以下のコードを入力してください．
+コードを確認の上，パスワードをリセットします．
+
+コード: [% ticket %]
+
+パスワードリセットの確認ページを閉じてしまった場合は，
+以下のリンクをクリックしてください．
+
+https://[% hostname %][% common_url %]reset_execution?ticket=[% ticket %]
+
+パスワードのリセットをした覚えの無い場合は，
+何もしないでください．
+
+----
+東京学芸大学 「数学科と情報」「コンピュータ概論」担当
+関谷 貴之
+<tsekiya@u-gakugei.ac.jp>
+

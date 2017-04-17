@@ -1,0 +1,16 @@
+[% INCLUDE header.html %]
+<h1 class="title">試験一覧</h1>
+
+<!-- 当面は直書き Tue Apr 17 10:25:51 2012 -->
+<ul>
+  [% exam_list %]
+</ul>
+<a href="make_exam?id=[% userid %]">Create Exam</a>
+id:[% id %]<br/>
+userid:[% userid %] <br/>
+fullname:[% fullname %] <br/>
+title:[% title %] <br/>
+code_title:[% code_title %] <br/>
+admin:[% admin %] <br/>
+試験問題の作成
+[% INCLUDE footer.html %]

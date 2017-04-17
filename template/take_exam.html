@@ -1,0 +1,28 @@
+[% INCLUDE header.html %]
+
+[% IF error != "" %]
+<p class="attention">指定された試験は公開されていません．</p>
+[% ELSE %]
+<h1 class="title">解答用紙: [% exam_name %]</h1>
+
+<p>プログラムを実行しないで，頭で考えて解答し，提出してください．正解したかどうかは成績に反映しませんが，提出したかどうかは考慮します．</p>
+<p class="attention">結果を統計的に処理して，どの問題を間違いやすいかを学術研究に使用することがあります．</p>
+<p>提出ボタンはページの最後部にあるので，各設問に解答しながら適宜スクロールしてください．</p>
+<p>答えが配列になる場合は，"[0, 1, 2, 3]" のように，<span class="attention">前後に [ ] (角括弧)をつけて，各要素を , (カンマ) で区切って</span>ください．</p>
+
+<form action="answer_exam" method="post">
+  <input type="hidden" name="exam_id" value="[% exam_id %]">
+<!-- <div class="fixed_height"> -->
+<table>
+<tr>
+ <th>設問番号</th><th>[% code_title %]</th><th>内容</th>
+</tr>
+[% exam_html %]
+</table>
+<!-- </div> -->
+<p><span class="attention">提出ボタンを押した時点で即提出として扱います．入力内容の確認画面はありません．従って，よく確認してから提出ボタンを押してください．</span><br><input type="submit" value=" 提出 ">
+<!-- <input type="reset" value=" リセット "> -->
+</p>
+</form> 
+[% END %]
+[% INCLUDE footer.html %]

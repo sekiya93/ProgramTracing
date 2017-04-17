@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+<head>
+ <title>Program Tracing: [% header_title %]</title>
+ <meta http-equiv="pragma" content="no-cache">
+ <meta http-equiv="cache-control" content="no-cache">
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ <!--[if lte IE 9]> 
+ <script src="html5shiv.js"></script>
+ <![endif]-->
+ <link rev="made" href="mailto:sekiya-at-ecc-u-tokyo-ac-jp">
+ <style type="text/css">
+<!--
+body
+{
+    background: white;
+    margin:0px;
+    /* Fonts */
+    font-size: 16px;
+}
+
+h1
+{
+    text-align: left;
+    color: navy;
+    margin-left: 0px;
+    padding-left: 8px;
+    border-bottom: 1px grey solid;
+    /* Fonts */
+    font-size: 24px;
+}
+
+h2
+{
+  text-align: left;
+  color: navy;
+  margin-left: 0px;
+  padding-left: 8px;
+  border-bottom: 1px grey solid;
+    /* Fonts */
+    font-size: 18px;
+}
+
+p{
+    margin-right: 8px;
+    margin-left: 8px;
+    /* Fonts */
+    font-size: 16px;
+}
+
+span.date{
+    font-size: 12px;
+    color: grey;
+}
+
+.attention{
+  color: red;
+  font-weight: bold;
+}
+
+li.title{
+  font-weight: bold;
+}
+
+pre{
+    background: black;
+    color: white;
+    margin: 8px;
+    padding: 8px;
+    padding-right: 16px;
+    padding-left: 16px;
+    /* Fonts */
+    font-size: 16px;
+}
+
+header{
+    background: black;
+    color: white;
+    width: auto;
+    text-align: right;
+    margin: 0px;
+    padding: 3px;
+    padding-right: 20px;
+    /* Fonts */
+    font-size: 12px;
+}
+
+div.content{
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+div.login_form{
+    margin: 30px;
+    padding: 20px;
+    border: 1px black solid;
+    background: #e0e0e0;
+}
+
+div.fixed_height{
+    border: 1px grey solid;
+    height: 600px; 
+    width: auto;
+    overflow: auto;
+}
+
+nav{
+    width: 100px;
+    padding: 6px;
+    float: left;
+}
+
+nav ul{
+    list-style: none;
+    padding-left: 6px;
+}
+
+nav li{
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+nav a:link{
+    color: grey;
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: grey;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: white;
+    font-weight: bold;
+    background: orange;
+    text-decoration: underline;
+}
+
+article.admin{
+    margin-left: 100px; /* nav(メニュー) に合わせる */
+}
+
+tr.by_each_0{
+    background: #e0e0e0;
+}
+
+div.login_form{
+    margin: 30px;
+    padding: 20px;
+    border: 1px black solid;
+    background: #e0e0e0;
+}
+
+address{
+    margin-left: 8px;
+}
+-->
+ </style>
+</head>
+<body>
+<header>
+[% IF userid != "" %]
+[% fullname %] ([% userid %])
+[% IF is_admin %]
+|
+<a href="admin">Administrator</a>
+|
+<a href="student">Student</a>
+[% END %]
+[% IF lti_userid == "" %]
+|
+<a href="logout">logout</a>
+[% END %]
+[% ELSE %]
+|
+[% END %]
+</header>
+[% IF admin_menu != "" %]
+<!-- 管理インタフェースのメニュー ここから-->
+<h1>管理者モード[% IF admin_title != "" %]: [% admin_title %][% END %]</h1>
+<nav>
+<ul>
+[% admin_menu %]
+</ul>
+</nav>
+<!-- 管理インタフェースのメニュー ここまで-->
+[% END %]

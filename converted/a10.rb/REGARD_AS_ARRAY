@@ -1,0 +1,11 @@
+def a10(a)
+  ans = []
+  if a == 3 then
+    ans.push(a)
+  else
+    for i in 1 .. a
+      ans.push(i.-@)
+    end
+  end
+  p(ans)
+end

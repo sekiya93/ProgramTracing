@@ -1,0 +1,45 @@
+[% INCLUDE header.html %]
+<article class="admin">
+<form action="admin_management" method="post" name="edit_exam">
+  <input type="hidden" name="exam_id" value="[% exam_id %]">
+  <input type="hidden" name="task" value="modify">
+ <table>
+  <tr>
+   <th>id</th>
+   <td>[% exam_id %]</td>
+  </tr>
+  <tr>
+   <th>name</th>
+   <td>
+    <input type="text" name="exam_name" value="[% exam_name %]" size="70">
+   </td>
+  </tr>
+  <tr>
+   <th>is_open_to_eccs</th>
+   <td>
+    <input type="radio" name="exam_is_open_to_eccs" value="1"[% IF exam_is_open_to_eccs %] checked[% END %]>公開
+    <input type="radio" name="exam_is_open_to_eccs" value="0"[% IF NOT exam_is_open_to_eccs %] checked[% END %]>非公開
+   </td>
+  </tr>
+  <tr>
+   <th>is_open_to_gakugei</th>
+   <td>
+    <input type="radio" name="exam_is_open_to_gakugei" value="1"[% IF exam_is_open_to_gakugei %] checked[% END %]>公開
+    <input type="radio" name="exam_is_open_to_gakugei" value="0"[% IF NOT exam_is_open_to_gakugei %] checked[% END %]>非公開
+   </td>
+  </tr>
+  <tr>
+   <th>registered<br>modified</th>
+   <td>[% exam_registered %]<br>[% exam_modified %]</td>
+  </tr>
+  <tr>
+   <th>description</th>
+   <td><textarea name="exam_description" rows="30" cols="70">[% exam_description %]</textarea></td>
+  </tr>
+  <tr>
+   <td colspan="2"><input type="submit" value="更新"></td>
+  </tr>
+ </table>
+</form>
+</article>
+[% INCLUDE footer.html %]

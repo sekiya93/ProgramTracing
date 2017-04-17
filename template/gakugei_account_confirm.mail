@@ -1,0 +1,38 @@
+From: [% sender %]
+Errors-To: [% sender %]
+Reply-To: [% sender %]
+To: [% mail_address %]
+Subject: Confirm user information
+Content-Type: Text/Plain; charset=iso-2022-jp
+Content-Transfer-Encoding: 7bit
+
+[% family_name_ja %] [% first_name_ja %] 様
+
+以下の情報に基づいて，
+東京学芸大学「コンピュータ概論」及び「数学科と情報」の
+講義用のアカウントを発行します．
+
+ユーザ名     : [% userid %]
+メールアドレス: [% mail_address %]
+氏名(日本語)  : [% family_name_ja %] [% first_name_ja %]
+氏名(ローマ字): [% family_name %] [% first_name %]
+
+上記に誤りがなければ，ユーザ登録内容確認ページで，
+以下のコードを入力してください．
+
+コード: [% ticket %]
+
+ユーザ登録内容確認ページを閉じてしまった場合は，
+以下のリンクをクリックしてください．
+
+https://[% hostname %][% common_url %]account_register?ticket=[% ticket %]
+
+氏名等に誤りがあれば，改めてアカウントの登録を試みてください．
+
+https://[% hostname %][% common_url %]
+
+----
+東京学芸大学 「数学科と情報」「コンピュータ概論」担当
+関谷 貴之
+<tsekiya@u-gakugei.ac.jp>
+

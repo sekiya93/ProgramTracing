@@ -1,0 +1,9 @@
+def a2(a)
+  ans = []
+  if a == 3 then
+    ans.push(a)
+  else
+    ans.push(a)
+  end
+  p(ans)
+end

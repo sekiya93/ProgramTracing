@@ -1,0 +1,24 @@
+From: [% sender %]
+Errors-To: [% sender %]
+Reply-To: [% sender %]
+To: [% mail_address %]
+Subject: Registration completed
+Content-Type: Text/Plain; charset=iso-2022-jp
+Content-Transfer-Encoding: 7bit
+
+[% fullname_ja %] 様
+
+ユーザ登録が完了しました．
+
+ユーザ名: [% userid %]
+パスワード: [% password %]
+
+上記のユーザ名とパスワードを用いて，
+プログラムのトレーシングのページ (https://[% hostname %]/tracing/)
+にログインできることを確認してください．
+
+----
+東京学芸大学 「数学科と情報」「コンピュータ概論」担当
+関谷 貴之
+<tsekiya@u-gakugei.ac.jp>
+

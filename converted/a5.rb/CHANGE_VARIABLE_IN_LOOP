@@ -1,0 +1,11 @@
+def a5(a)
+  ans = 0
+  for i in 1 .. a
+    if i > 3 then
+      ans = ans + i
+    else
+      ans = ans - i
+    end
+  end
+  p(ans)
+end

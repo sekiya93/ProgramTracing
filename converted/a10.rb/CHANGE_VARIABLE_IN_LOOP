@@ -1,0 +1,11 @@
+def a10(a)
+  ans = 0
+  if a == 3 then
+    ans = ans + a
+  else
+    for i in 1 .. a
+      ans = ans - i
+    end
+  end
+  p(ans)
+end

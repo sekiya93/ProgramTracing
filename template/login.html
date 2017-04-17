@@ -1,0 +1,42 @@
+[% INCLUDE header.html %]
+<h1 class="title">プログラムのトレーシング</h1>
+
+<div class="login_form">
+ <form action="login" method="post">
+  <input name="exam_id" type="hidden" value="[% exam_id %]">
+ <table border="0">
+  <tr>
+   <th style="text-align:left;">ユーザ名</th>
+  <tr>
+  <tr>
+   <td><input name="userid" type="text" size="32" maxlength="32" value="" style="font-size:26px;"></td>
+  </tr>
+  <tr>
+   <th style="text-align:left;">パスワード</th>
+  </tr>
+  <tr>
+   <td><input name="password" type="password" size="32" maxlength="32" style="font-size:26px;"></td>
+  </tr>
+  <tr>
+   <td><input type="submit" value=" ログイン "></td>
+  </tr>
+ </table>
+ </form>
+ </div>
+ [% IF info != "" %]<p>[% info %]</p>[% END %]
+ [% IF error != "" %]<p class="attention">[% error %]</p>[% END %]
+<!-- <p><a href="https://rp1.ecc.u-tokyo.ac.jp/cfive/" target="_blank">東京学芸大学用CFIVE</a>利用時と同じユーザ名とパスワードを入力してください．</p> -->
+<hr>
+ <p>東京学芸大学「コンピュータ概論」の履修者の方への注意です．<span class="date">2014年6月17日更新</span></p>
+<ul>
+ <li>本ツールで用いるユーザ名やパスワードは，東京学芸大学の学芸ポータルとは全く関係がありません．</li>
+ <li>初めて使う時は，<a href="/gakugei/">履修者向けのサイト</a>でユーザ登録を行って下さい．</li>
+</ul>
+<hr>
+ <p>東京大学教養学部「<a href="http://lecture.ecc.u-tokyo.ac.jp/~yamaguch/prog-cons/2013/" target="_blank">プログラム構成論 (山口和紀先生)</a>」「<a href="http://lecture.ecc.u-tokyo.ac.jp/~yamaguch/joho/2013/" target="_blank">情報 (山口和紀先生)</a>」「<a href="http://lecture.ecc.u-tokyo.ac.jp/~yamaguch/johosuuriensyuu2/2013/" target="_blank">情報数理科学演習2 (山口和紀先生，金子知適先生)</a>」の受講者の方への注意です．<span class="date">2013年6月17日更新</span></p>
+<ul>
+ <li>本ツールでは，ログイン時に利用者が入力したユーザ名とパスワードを用いて，<a href="http://www.ecc.u-tokyo.ac.jp/" target="_blank">教育用計算機システム</a>のメールサーバに接続可否を試み，その結果を用いて，ユーザ認証を行っています．</li>
+ <li>メールサーバへの接続の可否を調べるだけで，本ツールが利用者のメールを読むことはありません．</li>
+ <li>メールサーバへの接続の可否を調べた後，本ツール上に利用者のパスワードは残りません．</li>
+</ul>
+[% INCLUDE footer.html %]

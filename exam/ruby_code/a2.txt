@@ -1,0 +1,7 @@
+ans ← 0
+if a = 3
+  then
+    ans ← ans + a
+  else
+    ans ← ans - a
+endif

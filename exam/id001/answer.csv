@@ -1,0 +1,21 @@
+index,source,input,answer,ADD_EQUALITY_TO_INEQUALITY,CHANGE_SIGN_OF_INEQUALITY,CHANGE_VARIABLE_IN_CONDITION,CHANGE_VARIABLE_IN_CONDITION2,CHANGE_VARIABLE_IN_LOOP,CHANGE_VARIABLE_IN_LOOP2,CHANGE_VARIABLE_IN_SIMPLE_LOOP,MISUNDERSTAND_2D_ARRAY,NEGLECT_FOR_LOOP,REGARD_AS_ARRAY,type
+1,a1.rb,3,-3,3,-,-,-,-,-,-,-,-,[3],trace_output_simple
+2,a1.rb,4,4,-,-4,-,-,-,-,-,-,-,-,trace_output_simple
+3,a2.rb,3,3,-,-,-,-,-,-,-,-,-,-,trace_output_simple
+4,a2.rb,4,-4,-,-,-,-,-,-,-,-,-,[4],trace_output_simple
+5,a3.rb,3,9,-,-,-,-,6,-,6,-,3,"[1, 2, 3]",trace_output_simple
+6,a3.rb,4,16,-,-,-,-,10,-,10,-,4,"[1, 2, 3, 4]",trace_output_simple
+7,a4.rb,3,6,-,-,-,-,-,-,-,-,[],"[1, 2, 3]",trace_output_simple
+8,a4.rb,4,10,-,-,-,-,-,-,-,-,[],"[1, 2, 3, 4]",trace_output_simple
+9,a5.rb,3,-9,9,-,-,-,-6,-,-,-,-3,"[-1, -2, -3]",trace_output_simple
+10,a5.rb,4,16,-,-16,-8,-,-2,-,-,-,4,"[-1, -2, -3, 4]",trace_output_simple
+11,a6.rb,3,9,-,-,-3,-,0,-,-,-,3,"[-1, -2, 3]",trace_output_simple
+12,a6.rb,4,-16,-,-,-8,-,-4,-,-,-,-4,"[-1, -2, 3, -4]",trace_output_simple
+13,a7.rb,3,-6,0,0,-,-,-,-,-,-,[],"[-1, -2, -3]",trace_output_simple
+14,a7.rb,4,-2,4,-4,-,-,-,-,-,-,[],"[-1, -2, -3, 4]",trace_output_simple
+15,a8.rb,3,0,-,-,-,-,-,-,-,-,[],"[-1, -2, 3]",trace_output_simple
+16,a8.rb,4,-4,-,-,-,-,-,-,-,-,[],"[-1, -2, 3, -4]",trace_output_simple
+17,a9.rb,3,-3,9,-,-,-,-,-,-,-,-,-,trace_output_simple
+18,a9.rb,4,16,-,-4,-,-,10,-,10,-,4,"[1, 2, 3, 4]",trace_output_simple
+19,a10.rb,3,3,-,-,-,-,-,-,-,-,-,-,trace_output_simple
+20,a10.rb,4,-16,-,-,-,-,-10,-,-10,-,-4,"[-1, -2, -3, -4]",trace_output_simple

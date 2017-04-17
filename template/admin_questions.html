@@ -1,0 +1,20 @@
+[% INCLUDE header.html %]
+<article class="admin">
+<div class="fixed_height">
+<p>
+ <form action="admin_questions" method="get" name="add_question">
+  <input type="hidden" name="exam_id" value="[% exam_id %]">
+  <input type="hidden" name="task" value="add">
+新しい設問を追加する際には右のボタンを押してください．
+  <input type="submit" value="設問追加">
+ </form>
+</p>
+<table>
+<tr>
+ <th></th><th>[% code_title %]</th><th>内容</th><th></th><th></th>
+</tr>
+[% exam_html %]
+</table>
+</div>
+</article>
+[% INCLUDE footer.html %]

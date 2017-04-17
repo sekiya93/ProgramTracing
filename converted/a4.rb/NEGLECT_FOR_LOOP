@@ -1,0 +1,5 @@
+def a4(a)
+  ans = 0
+  ans = ans + i
+  p(ans)
+end

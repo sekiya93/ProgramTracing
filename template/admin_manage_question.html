@@ -1,0 +1,94 @@
+[% INCLUDE header.html %]
+<article class="admin">
+<form action="admin_manage_question" method="post" name="edit_quest">
+  <input type="hidden" name="exam_id" value="[% exam_id %]">
+  <input type="hidden" name="quest_index" value="[% quest_index %]">
+  <input type="hidden" name="task" value="modify">
+ <table>
+  <tr>
+   <th>exam.id / 試験ID</th>
+   <td colspan="2">ID:[% exam_id %]</td>
+  </tr>
+  <tr class="by_each_0">
+   <th>quest.index / 設問番号</th>
+   <td colspan="2">問 [% quest_index %]</td>
+  </tr>
+  <tr>
+   <th>type / 設問種別</th>
+   <td>
+    <select name="quest_type">[% quest_type_list %]</select>
+   </td>
+  </tr>
+  <tr class="by_each_0">
+   <th>source / ソース</th>
+   <td>
+    <select name="quest_source" onchange="JavaScript:change_code_string_area()">[% quest_source_list %]</select>
+   </td>
+   <td valign="top" rowspan="11"><pre class="screen">[% quest_code_string %]</td>
+  </tr>
+  <tr>
+   <th>[% IF quest_type == "inverse_trace" %]output / 出力[% ELSE %]input / 入力[% END %]</th>
+   <td>
+    <input type="text" name="quest_input" value="[% quest_input %]">
+   </td>
+  </tr>
+  <tr class="by_each_0">
+   <th>answer / 正答※</th>
+   <td>
+    [% quest_answer %]
+   </td>
+  </tr>
+  [% quest_error_labels_html %]
+  <tr>
+   <td colspan="2">
+   <p class="attention">正答及び誤答は「更新」ボタンを押すと再計算されます．
+<input type="submit" value="更新"></p>
+</td>
+  </tr>
+ </table>
+</form>
+
+ <form action="admin_questions" method="get" name="delete_question">
+  <input type="hidden" name="exam_id" value="[% exam_id %]">
+  <input type="hidden" name="quest_index" value="[% quest_index %]">
+  <input type="hidden" name="task" value="delete">
+<p>設問を削除するには右のボタンを押してください．<span class="attention">即座に削除します．確認画面は表示しません．</span>
+  <input type="submit" value="削除"></p>
+ </form>
+</article>
+<script type="text/javascript">
+N4 = GK = IE = 0;
+if (document.layers) N4 = 1;
+else if (document.all) IE = 1;
+else if (document.getElementById) GK = 1;
+
+function show_area(area_id){
+  if(N4|GK){
+    document.getElementById(area_id).style.display = "block";
+  }else{
+    document.all(area_id).style.display = "block";
+  }
+}
+
+function hide_area(area_id){
+  if(N4|GK){
+    document.getElementById(area_id).style.display = "none";
+  }else{
+    document.all(area_id).style.display = "none";
+  }
+}
+
+function change_code_string_area(){
+  var selected_source = document.edit_quest.quest_source;
+
+  for(var i = 0; i < selected_source.length; i++){
+    var area_id = 'code_string_area_' + selected_source[i].value;
+    if(selected_source[i].selected){
+      show_area(area_id);
+    }else{
+      hide_area(area_id);
+    }
+  }
+}
+</script>
+[% INCLUDE footer.html %]

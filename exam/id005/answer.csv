@@ -1,0 +1,6 @@
+index,source,input,answer,CHANGE_VARIABLE_IN_CONDITION,CHANGE_VARIABLE_IN_CONDITION2,CHANGE_VARIABLE_IN_LOOP,CHANGE_VARIABLE_IN_LOOP2,CHANGE_VARIABLE_IN_SIMPLE_LOOP,NEGLECT_FOR_LOOP,REGARD_AS_ARRAY,MISUNDERSTAND_2D_ARRAY,type
+1,array_test049.rb,"[4, 8, 2, 1, 3, 5]",2,-,-,-,-,-,-,-,-,trace
+2,array_test127.rb,"[4, 8, 2, 1, 3, 5]",1,-,-,-,-,-,-,-,-,trace
+3,array_test062.rb,"[4, 8, 2, 1, 3, 5]",3,-,-,-,-,-,-,-,-,trace
+4,array_test093.rb,"[4, 8, 2, 1, 3, 5]",1,-,-,-,-,-,-,-,-,trace
+5,array_test998.rb,"[[2, 1, 0], [1, 2, 0], [2, 1, 0]]",2,-,-,-,-,-,-,-,0,trace
